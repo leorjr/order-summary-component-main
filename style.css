@@ -166,6 +166,11 @@ main section div.container div.button div {
   cursor: pointer;
 }
 
+main section div.container div.button div:hover {
+  opacity: 0.5;
+  transition: opacity 1s;
+}
+
 main section div.container div.linkCancel {
   width: 80%;
   margin: 0 auto;
