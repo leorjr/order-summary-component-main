@@ -1,5 +1,7 @@
 # Frontend Mentor - Order summary card
 
+Link deploy: https://order-summary-component-main-five.vercel.app/
+
 ![Design preview for the Order summary card coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
