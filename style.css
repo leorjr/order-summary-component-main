@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #d6e1fe;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+main {
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--bg);
+}
+
+main section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main section div.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 135px 1fr 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+    "image"
+    "title"
+    "text"
+    "details"
+    "button"
+    "linkCancel";
+}
+
+main section div.container div.image {
+  grid-area: image;
+  background-image: url(./images/illustration-hero.svg);
+  background-size: cover;
+
+  border-radius: 10px;
+}
