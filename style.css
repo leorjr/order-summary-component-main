@@ -6,6 +6,12 @@ body {
 
 :root {
   --bg: #d6e1fe;
+  --bg-card: #ffffff;
+  --bg-button: #436ae1;
+  --color-title: #2a365e;
+  --color-text: #6f7692;
+  --color-link: #3e52a3;
+  --color-text-button: #cdcaf5;
 }
 
 .attribution {
@@ -20,17 +26,29 @@ main {
   width: 100vw;
   height: 100vh;
   background-color: var(--bg);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 main section {
   width: 80%;
+  height: 100%;
   margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 main section div.container {
+  max-height: 450px;
+  max-width: 256px;
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 135px 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 135px 0.5fr 1fr 1fr 0.6fr 0.4fr;
   grid-template-areas:
     "image"
     "title"
@@ -38,6 +56,12 @@ main section div.container {
     "details"
     "button"
     "linkCancel";
+
+  background-color: var(--bg-card);
+  border-radius: 10px;
+
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.23);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.23);
 }
 
 main section div.container div.image {
@@ -45,5 +69,113 @@ main section div.container div.image {
   background-image: url(./images/illustration-hero.svg);
   background-size: cover;
 
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+main section div.container div.title {
+  grid-area: title;
+  width: 80%;
+  margin: 0 auto;
+}
+main section div.container div.title h2 {
+  color: var(--color-title);
+}
+
+main section div.container div.text {
+  grid-area: text;
+  width: 81%;
+  margin: 0 auto;
+}
+
+main section div.container div.text p {
+  line-height: 1.5;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--color-text);
+}
+
+main section div.container div.details {
+  grid-area: details;
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+main section div.container div.details div.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main section div.container div.details div.icon figure {
+  width: 50px;
+  margin: 0 auto;
+}
+
+main section div.container div.details div.icon figure img {
+  width: 100%;
+}
+
+main section div.container div.details div.plan {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section div.container div.details div.plan p {
+  color: var(--color-text);
+  font-size: 0.9rem;
+  margin: 2px;
+}
+
+main section div.container div.details div.plan p span {
+  color: var(--color-title);
+  font-weight: 600;
+}
+
+main section div.container div.details div.link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+main section div.container div.details div.link p a {
+  color: var(--color-link);
+}
+
+main section div.container div.button {
+  grid-area: button;
+  width: 80%;
+  margin: 0 auto;
+}
+
+main section div.container div.button div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: var(--bg-button);
+  color: var(--color-text-button);
+  font-size: 1rem;
+  font-weight: 600;
   border-radius: 10px;
+  cursor: pointer;
+}
+
+main section div.container div.linkCancel {
+  width: 80%;
+  margin: 0 auto;
+}
+
+main section div.container div.linkCancel p {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+main section div.container div.linkCancel p a {
+  text-decoration: none;
+  color: var(--color-text);
 }
